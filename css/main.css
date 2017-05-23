@@ -139,13 +139,14 @@ p.ta{text-align:left;}
 .re_tishi .re_learng{margin-top:-0.2rem;}
 .re_tishi p{font-size:.3rem;color: #333333;letter-spacing: 0;line-height:.48rem;}
 .re_tishi .level{padding:0 1rem;}
-.re_tishi .recommond{padding:0 1.2rem;}
+.re_tishi .recommond{padding:0 1.2rem;font-size:.24rem;color: #3F3F3F;letter-spacing: 0;line-height: 24px;}
 .re_tishi p:nth-child(2){margin-top:.1rem;}
 .re_tishi:nth-child(2){border-bottom:none;}
 .golibary{width:4.4rem;height:.72rem;display:block;margin:0 auto;font-size:.28rem;color: #522F0B;letter-spacing: 0;background: #FFCF1A;
 border-radius: 2rem;outline:none;border:none;font-weight:700;position:absolute;bottom:-0.36rem;left:50%;margin-left:-2.2rem;}
 .questcontent{max-height:3rem;font-size:.3rem;color: #333333;letter-spacing: 0;line-height:.36rem;overflow:scroll;-webkit-overflow-scrolling:touch;margin-top:.4rem;}
 .moreTest{color: #A3A3A3;letter-spacing: 0;line-height:.48rem;text-align:center;margin-top:.4rem;}
+.colorline{height:48px;background:red;width:79%;margin:-10px auto 0;}
 
 /*-----------------------------图书馆-------------------------*/
 .lib_header{height:1.8rem;position:relative;}

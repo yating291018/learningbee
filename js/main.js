@@ -480,7 +480,8 @@
     */
    
     function getOpenid(locationurl,callback){
-        var openid=$.cookie("xfOpenId");
+        // var openid=$.cookie("xfOpenId");
+        var openid="oVP3EwmxhH45T9PRDCNt6R1XgiTU";
         if(!openid){
                 $.post("http://mptest.learningbee.net/xfwx/requestOpenId").done(function(data){
                     if(typeof(data.openId)!='undefined' && data.openId !='' && data.openId !=null  && data.openId !='null' ){
