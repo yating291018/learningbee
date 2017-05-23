@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试阅读水平</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/template-web.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/testdata.js"></script>
+    <script src="../js/template.js"></script>
+</head>
+<body style="background:#FFF">
+ <script id="template1" type="text/html">
+    <header class="testRead">
+            <span class="questionId">{{questionId}}</span>
+            <span class="sumquestions">of 10</span>
+            <div class="bottomline"></div>
+    </header>
+    <main class="questionmain">
+        <section class="questionDesc">
+                {{question}}
+        </section>
+        <section class='answer'>
+            {{each answers}}
+               <p class="pfirst">{{$value}}</p>
+            {{/each}}
+        </section>
+    </main>
+    {{if questionId==1}}
+        <footer class="testfooter text-center testReadfooter">
+            <button class="nextTi">下一题</button>
+        </footer>
+    {{else if questionId<10 && questionId>1}}
+        <footer class="testfooter testReadfooter">
+            <button class="prev">上一题</button>
+            <button class="next nextTi">下一题</button>
+        </footer>
+    {{else if questionId==10}}
+        <footer class="testfooter testReadfooter">
+            <button class="prev">上一题</button>
+            <button class="next send">提  交</button>
+        </footer>
+    {{/if}}
+ </script>
+ <script id="template2" type="text/html">
+    <header class="testRead">
+            <span class="questionId">{{questionId}}</span>
+            <span class="sumquestions">of 10</span>
+            <div class="bottomline"></div>
+    </header>
+    <main class="questionmain">
+        <section class="questionDesc">
+                {{question}}
+        </section>
+        <section class='answer'>
+          {{each answers}}
+            <div>
+                <img src="../images/questionimg/{{$value}}" alt="">
+            </div>
+          {{/each}}
+        </section>
+    </main>
+    {{if questionId==1}}
+        <footer class="testfooter text-center testReadfooter">
+            <button class="nextTi">下一题</button>
+        </footer>
+    {{else if questionId<10 && questionId>1}}
+        <footer class="testfooter testReadfooter">
+            <button class="prev">上一题</button>
+            <button class="next nextTi">下一题</button>
+        </footer>
+    {{else if questionId==10}}
+        <footer class="testfooter testReadfooter">
+            <button class="prev">上一题</button>
+            <button class="next send">提  交</button>
+        </footer>
+    {{/if}}
+ </script>
+ <script id="template3" type="text/html">
+      <header class="testRead">
+            <span class="questionId">{{questionId}}</span>
+            <span class="sumquestions">of 10</span>
+            <div class="bottomline"></div>
+    </header>
+    <main class="questionmain">
+        <section class="questionDesc">
+                {{question}} 
+        </section>
+        <section class="imgShow">
+            <img src="../images/questionimg/{{imagesrc}}" alt="">
+        </section>
+        <section class='answer testanswer'>
+          {{each answers}}　
+            <p class="ta">{{$value}}</p>
+        　{{/each}}
+        </section>
+    </main>
+    {{if questionId==1}}
+        <footer class="testfooter text-center testReadfooter">
+            <button class="nextTi">下一题</button>
+        </footer>
+    {{else if questionId<10 && questionId>1}}
+        <footer class="testfooter testReadfooter">
+            <button class="prev">上一题</button>
+            <button class="next nextTi">下一题</button>
+        </footer>
+    {{else if questionId==10}}
+        <footer class="testfooter testReadfooter">
+            <button class="prev">上一题</button>
+            <button class="next send">提  交</button>
+        </footer>
+    {{/if}}
+ </script>
+ <script id="template4" type="text/html">
+    <header class="testRead">
+            <span class="questionId">{{questionId}}</span>
+            <span class="sumquestions">of 10</span>
+            <div class="bottomline"></div>
+    </header>
+    <main class="questionmain">
+        <section class="questcontent">
+               {{desc}}
+        </section>
+        <section class="questionDesc">
+                {{question}} 
+        </section>
+        <section class='answer testanswer'>
+              {{each answers}}　
+                <p class="ta">{{$value}}</p>
+            　{{/each}}
+        </section>
+    </main>
+    {{if questionId==1}}
+        <footer class="testfooter text-center testReadfooter">
+            <button class="nextTi">下一题</button>
+        </footer>
+    {{else if questionId<10 && questionId>1}}
+        <footer class="testfooter testReadfooter">
+            <button class="prev">上一题</button>
+            <button class="next nextTi">下一题</button>
+        </footer>
+    {{else if questionId==10}}
+        <footer class="testfooter testReadfooter">
+            <button class="prev">上一题</button>
+            <button class="next send">提  交</button>
+        </footer>
+    {{/if}}
+ </script>
+ <script id="template5" type="text/html">
+    <header class="testRead">
+            <span class="questionId">{{questionId}}</span>
+            <span class="sumquestions">of 10</span>
+            <div class="bottomline"></div>
+    </header>
+    <main class="questionmain">
+        <section class="questcontent">
+               {{desc}}
+        </section>
+        <section class="questionDesc">
+                {{question}} 
+        </section>
+         <section class='answer clearfix testfive'>
+           {{each answers}}
+                <div>
+                    <img src="../images/questionimg/{{$value}}" alt="">
+                </div>
+           {{/each}}
+        </section>
+    </main>
+    {{if questionId==1}}
+        <footer class="testfooter text-center testReadfooter">
+            <button class="nextTi">下一题</button>
+        </footer>
+    {{else if questionId<10 && questionId>1}}
+        <footer class="testfooter testReadfooter">
+            <button class="prev">上一题</button>
+            <button class="next nextTi">下一题</button>
+        </footer>
+    {{else if questionId==10}}
+        <footer class="testfooter testReadfooter">
+            <button class="prev">上一题</button>
+            <button class="next send">提  交</button>
+        </footer>
+    {{/if}}
+ </script>
+</body>
+</html>

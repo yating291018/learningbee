@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>本月课程表</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/main.css?v=1.0">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/template-web.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/calendar.js"></script>
+</head>
+<body>
+    <header class="mc_header">
+        <div class="time">
+            <img src="../images/arrow-right.png" alt="" class="mc_arrow_left">
+            <span class="riqi"><span class="year">2017</span>年<span class="month">五</span>月</span>
+            <img src="../images/arrow-right.png" alt="" class="mc_arrow">
+        </div>
+    </header>
+    <main>
+        <section class="calendar">
+            <div class="calendar_header">
+                <ul class="hlist">
+                    <li>MON</li>
+                    <li>TUE</li>
+                    <li>WED</li>
+                    <li>THU</li>
+                    <li>FRI</li>
+                    <li>SAT</li>
+                    <li>SUN</li>
+                </ul>
+            </div>
+            <div class="calendar_center">
+                <ul class="cen_content clearfix">
+                    <!---->
+                </ul>
+            </div>
+            <div class="calendar_bottom">
+                <div class="b_left">
+                    <span class="b_flag"></span>
+                    <span class="b_info">免费课程</span>
+                </div>
+                <div class="b_right">
+                    <span class="b_flag red"></span>
+                    <span class="b_info">付费课程</span>
+                </div>
+            </div>
+        </section>
+        <section class="course_content">
+            <script id="coursedesc" type="text/html">
+              {{if classList.length>0}}
+                {{each classList}}
+                        <div class="cc_item clearfix">
+                           {{if $index==0}}
+                                <div class="cc_left float-left">
+                                    <div class="cl_gate">
+                                        <span class='clmonth'>{{month}}</span>
+                                        <span>{{day}}</span>
+                                    </div>
+                                </div>
+                            {{/if}}
+                            <div class="float-right cc_right">
+                                <span class="b_flag marginRight"></span><span class="title">自然拼读</span>
+                                <p>
+                                    上课时间 : {{$value.classTime}}
+                                </p>
+                                <p>
+                                    授课老师 : {{$value.displayName}}老师
+                                </p>
+                                <p>
+                                    适合年龄 : {{$value.ageBracketText}}
+                                </p>
+                            </div>
+                        </div>
+                 {{/each}}
+              {{else if classList.length==0}}
+                       <div class="cc_item clearfix">
+                            <div class="cc_left float-left">
+                                <div class="cl_gate">
+                                    <span>{{month}}</span>
+                                    <span>{{day}}</span>
+                                </div>
+                            </div>
+                            <div class="float-right cc_right">
+                                <img src="../images/nodata.png" alt="" class="nodata">
+                                <div class="nocourse">暂无课程安排</div>
+                            </div>
+                        </div> 
+               {{/if}}
+             </script>
+        </section>
+        <footer>
+                <section class="gocourse">
+                    <a href="loadapp.html">立即去上课</a>
+                </section>
+                <div class="upload">
+                    <p>下载<a href="###">Learning Bee App</a></p>
+                    或打开网页<a href="###">www.learningbee.net</a>查看并购买课程
+                </div>
+        </footer>
+    </main>
+</body>
+</html>

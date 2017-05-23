@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试报告</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/main.css?v=1.0">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/template-web.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/testport.js"></script>
+</head>
+<body style="background:#F9F9F9">
+      <script id="testreport" type="text/html">
+        <header class="testreportheader">
+                <img src="../images/bee.png" alt="" class="bee">
+                <img src="../images/title.png" alt="" class="reporttitle">
+        </header>
+        <main class="report_main">
+            <div class="re_tishi">
+                <h4>{{userName}}</h4>
+                <p class="level">
+                    {{comments}}
+                </p>
+            </div>
+            <div class="re_tishi">
+                <h4 class="re_learng">推荐学习</h4>
+                <p class="recommond">
+                       {{recommend}}
+                </p>
+            </div>
+            <button class="golibary">去图书馆</button>
+        </main>
+        <div class="moreTest">
+                联系助教进一步测评
+        </div>
+    </script>
+</body>
+</html>

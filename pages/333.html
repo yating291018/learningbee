@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>线上外教一对四课程1</title>
+        <link rel="stylesheet" href="http://g.alicdn.com/de/prismplayer/1.5.7/skins/default/index.css" />
+        <script type="text/javascript" src="http://g.alicdn.com/de/prismplayer/1.5.7/prism-min.js"></script>
+    </head>
+    <body>
+    <div id="J_prismPlayer" class="prism-player"></div>
+    <button id="J_clickToPlay" type="button">播放</button>
+    <script>
+        // 初始化播放器
+        var player = new prismplayer({
+            id: "J_prismPlayer", //容器id
+            source: "http://view.learningbee.net/talkbee/lesson-ld/bca78084bc5e452db5373fc98ae0d805/mytalkbee.mp4",// 媒体播放地址
+            autoplay: false,    //自动播放
+            width: "100%",      // 宽度
+            height: "400px"      // 高度
+        });
+        var clickDom = document.getElementById("J_clickToPlay");
+        clickDom.addEventListener("click", function(e) {
+			// 调用播放器的play方法
+            player.play();
+        });
+       // 监听播放器的pause事件
+        player.on("pause", function() {
+            //alert("播放出错");
+        });
+    </script>
+    </body>

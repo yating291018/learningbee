@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人资料</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/userinfo.js"></script>
+</head>
+<body style="background:#FCFCFC">
+    <header class="userheader">
+        <img src="../images/bee.png" alt="">
+    </header>
+    <main>
+        <section class="userinfo">
+                <form>
+                    <h3>填写个人信息</h3>
+                    <div>
+                        <input type="text" placeholder="孩子姓名" class="user_name">
+                        <span class="userinfoerror">不能为空！</span>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="性别" class="user_sex" readonly="readonly">
+                        <span class="userinfoerror">不能为空！</span>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="年龄" class="user_age" readonly="readonly">
+                        <span class="userinfoerror">不能为空！</span>
+                    </div>
+                    <button class="btn userbtn">开始测试</button>
+                </form>
+        </section>
+    </main>
+    <!--弹窗-->
+
+<style>
+
+</style>
+<div class="personal-fixed gender-fixed">
+    <div class="personal-cpm">
+        <ul class="personal-gender">
+            <li>
+                <div class="clearfix">
+                    <span></span>
+                    <i>男</i>
+                    <input class="hidden" type="radio" value="nan">
+                </div>
+            </li>
+            <li>
+                <div class="clearfix">
+                    <span></span>
+                    <i>女</i>
+                    <input class="hidden" type="radio" value="nv">
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="personal-fixed age-fixed">
+    <div class="personal-cpm">
+        <ul class="personal-age">
+            <li>
+                <div class="clearfix">
+                    <span></span>
+                    <i>幼儿园</i>
+                    <input class="hidden" type="radio" value="1">
+                </div>
+            </li>
+            <li>
+                <div class="clearfix">
+                    <span></span>
+                    <i>一年级</i>
+                    <input class="hidden" type="radio" value="1">
+                </div>
+            </li>
+            <li>
+                <div class="clearfix">
+                    <span></span>
+                    <i>二年级</i>
+                    <input class="hidden" type="radio" value="nv">
+                </div>
+            </li>
+            <li>
+                <div class="clearfix">
+                    <span></span>
+                    <i>三年级</i>
+                    <input class="hidden" type="radio" value="nv">
+                </div>
+            </li>
+            <li>
+                <div class="clearfix">
+                    <span></span>
+                    <i>四年级</i>
+                    <input class="hidden" type="radio" value="nv">
+                </div>
+            </li>
+             <li>
+                <div class="clearfix">
+                    <span></span>
+                    <i>五年级</i>
+                    <input class="hidden" type="radio" value="nv">
+                </div>
+            </li>
+            <li>
+                <div class="clearfix">
+                    <span></span>
+                    <i>六年级</i>
+                    <input class="hidden" type="radio" value="nv">
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
