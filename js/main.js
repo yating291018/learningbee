@@ -5,7 +5,6 @@
         $(window).resize(setRem);
         selectQuestion();
         imgSelect();
-        selectoption();
         //获取验证码，注册登陆
         login();
         //个人信息提示
@@ -40,75 +39,7 @@
         })
     }
 
-    /*
-    选中对应的类型
-    */
-    var selectoption=function(){
-                var　colortype=[
-                    {"id":0,colors:[
-                        {"color":"pink","text":"粉红"},
-                        {"color":"red","text":"红色"},
-                        {"color":"yellow","text":"黄色"},
-                        {"color":"blue","text":"蓝色"},
-                        {"color":"green","text":"绿色"}
-                    ]},
-                    {"id":1,colors:[
-                        {"color":"orange","text":"橙色"},
-                        {"color":"lblue","text":"浅蓝"},
-                        {"color":"zi","text":"紫色"},
-                        {"color":"jin","text":"金色"}
-                    ]},
-                    {"id":2,colors:[
-                        {"color":"yin","text":"银色"},
-                        {"color":"shgreen","text":"深绿"},
-                        {"color":"shred","text":"深红"},
-                        {"color":"shblue","text":"深蓝"}
-                    ]}
-                ]
-                $(".kinder").on("click",function(e){
-                        e.stopPropagation();
-                        var $this=$(this);
-                        $(this).find(".arrow").toggleClass("rotate");
-                        $(this).find(".option").slideToggle();
-                        var _this=$(this).find(".option");
-                        $(this).find(".koption ul li").on("click",function(e){
-                            e.stopPropagation();
-                            $(".kinder").find("span").text($(this).text());
-                            _this.slideUp();
-                            $this.find(".arrow").removeClass("rotate");
-                            var index=$(this).index();
-                            var colordata=colortype[index];
-                            $("#firsttype").removeAttr("class").attr("class","circle  "+colordata.colors[0].color).next().text(colordata.colors[0].text);
-                            console.log(colordata)
-                            var html="";
-                            colordata.colors.forEach(function(item,index,arr){
-                                html+="<li><div class='circle  "+item.color+"'></div><span>"+item.text+"</span></li>"
-                            })
-                            $(".joption ul").html(html);
-                        })
-                })
-                $(".junior").on("click",function(e){
-                        e.stopPropagation();
-                        $(".joption").slideToggle();
-                        $(this).find(".arrow").toggleClass("rotate");
-                        var $this=$(this);
-                        $(".joption").find("ul li").on("click",function(e){
-                             e.stopPropagation();
-                             var color=$(this).find(".circle").attr("class");
-                             var text=$(this).find("span").text();
-                             $("#firsttype").removeAttr("class").attr("class",color).next().text(text);
-                             $(".joption").slideUp();
-                             $this.find(".arrow").removeClass("rotate");
-                        })
-                })
-                $(document).on("click",function(){
-                        var kjsDom=$(".kjs");
-                        kjsDom.removeClass("kjsbackground");
-                        kjsDom.find(".arrow").removeClass("rotate");
-                        kjsDom.find(".option").slideUp();
-                })
-    }
-
+   
     /**
      * 倒计时六十秒
      * 用法:time(o)

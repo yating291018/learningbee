@@ -8,6 +8,7 @@
                 timer=setTimeout(function(){
                     $.post(requestApi+"testingReport",{"openId":openid}).done(data=>{
                         if(data.errCode=="00"){
+                            console.log(data.report)
                             testhtml=template("testreport",data.report);
                             $("body").html(testhtml);
                         //未绑定

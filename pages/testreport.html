@@ -36,7 +36,42 @@
                 </p>
             </div>
             <div class="colorline">
-                    
+                    <div>
+                        <img src="../images/colors/magenta.png" alt="学丰" class="colorpic">
+                        <img src="../images/colors/Tri-magenta.png" class="jianpic">
+                    </div>
+                    <div class="box selected">
+                        <img src="../images/colors/red.png" alt="学丰" class="colorpic">
+                        <img src="../images/colors/Tri-red.png" class="jianpic showjian">
+                    </div>
+                    <div>
+                        <img src="../images/colors/yellow.png" alt="学丰" class="colorpic">
+                        <img src="../images/colors/Tri-yellow.png" class="jianpic">
+                    </div>
+                    <div>
+                        <img src="../images/colors/blue.png" alt="学丰" class="colorpic">
+                        <img src="../images/colors/Tri-blue.png" class="jianpic">
+                    </div>
+                    <div>
+                        <img src="../images/colors/green.png" alt="学丰" class="colorpic">
+                        <img src="../images/colors/Tri-green.png" class="jianpic">
+                    </div>
+                    <div>
+                        <img src="../images/colors/orange.png" alt="学丰" class="colorpic">
+                        <img src="../images/colors/Tri-orange.png" class="jianpic">
+                    </div>
+                    <div>
+                        <img src="../images/colors/Turquoise.png" alt="学丰" class="colorpic">
+                        <img src="../images/colors/Tri-Turquoise.png" class="jianpic">
+                    </div>
+                    <div>
+                        <img src="../images/colors/Purple.png" alt="学丰" class="colorpic">
+                        <img src="../images/colors/Tri-purple.png" class="jianpic">
+                    </div>
+                    <div>
+                        <img src="../images/colors/Gold.png" alt="学丰" class="colorpic">
+                        <img src="../images/colors/Tri-gold.png" class="jianpic">
+                    </div>
             </div>
             <button class="golibary">去图书馆</button>
         </main>
@@ -44,5 +79,24 @@
                 联系助教进一步测评
         </div>
     <!--</script>-->
+    <script>
+        var divDoms=$(".colorline>div");
+        divDoms.each(function(index,item){
+            $(this).css("left",0.664*index+"rem");
+        })
+
+        var colors=[
+            {picurl:"../images/colors/magenta.png",flag:"../images/colors/Tri-magenta.png"},
+            {picurl:"../images/colors/red.png",flag:"../images/colors/Tri-red.png"},
+            {picurl:"../images/colors/yellow.png",flag:"../images/colors/Tri-yellow.png"},
+            {picurl:"../images/colors/blue.png",flag:"../images/colors/Tri-blue.png"},
+            {picurl:"../images/colors/green.png",flag:"../images/colors/Tri-green.png"},
+            {picurl:"../images/colors/orange.png",flag:"../images/colors/Tri-orange.png"},
+            {picurl:"../images/colors/Turquoise.png",flag:"../images/colors/Tri-Turquoise.png"},
+            {picurl:"../images/colors/Purple.png",flag:"../images/colors/Tri-purple.png"},
+            {picurl:"../images/colors/Gold.png",flag:"../images/colors/Tri-gold.png"}
+        ]
+       
+    </script>
 </body>
 </html>

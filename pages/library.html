@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/template-web.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/library.js"></script>
 </head>
 <body style="background:#FCFCFC">
       <header class="lib_header">
@@ -18,365 +20,57 @@
             <div class="type_select clearfix">
                 <div class="kinder kjs">
                     <span>幼儿园/小学</span>
+                    <input type="text" class="gradeId">
                     <img src="../images/arrow-down.png" alt="" class="arrow">
                     <div class="kin_option option  koption">
                         <ul>
-                            <li>幼儿园/小学</li>
+                            <!--<li>幼儿园/小学</li>
                             <li>初中</li>
-                            <li>高中</li>
+                            <li>高中</li>-->
                         </ul>
                     </div>
                 </div>
                 <div class="junior kjs">
-                    <div class="circle orange" id="firsttype"></div><span class="juniorColor">粉红</span>
+                    <div class="circle" id="firsttype"></div><span class="juniorColor"></span>
+                    <input type="text" class="serialId">
                     <img src="../images/arrow-down.png" alt="" class="arrow">
                     <div class="kin_option option joption">
                         <ul>
-                            <li><div class="circle orange"></div><span>橙色</span></li>
+                            <!--<li><div class="circle orange"></div><span>橙色</span></li>
                             <li><div class="circle lblue"></div><span>浅蓝</span></li>
                             <li><div class="circle zi"></div><span>紫色</span></li>
-                            <li><div class="circle jin"></div><span>金色</span></li>
+                            <li><div class="circle jin"></div><span>金色</span></li>-->
                         </ul>
                     </div>
                 </div>
             </div>
       </header>
       <main class="lib_main">
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-                
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-                
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-                
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-                
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-                
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-                
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-                
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-                
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-                
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-                
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-            <div class="bookitem">
-                <p class="pimg">
-                    <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
-                    <span class="readed"><img src="../images/class.png" alt=""></span>
-                <p>
-                <div class="bookname">
-                    <div class="bookcircle" style="background:red"></div>
-                    <span>Monkey Fun</span>
-                </div>
-                <div class="wordnum">词汇量：200</div>
-                <img src="../images/read.png" alt="" class="yiread">
-            </div>
-           
+          <script id="librarylist" type="text/html">
+           {{each booksList}}
+                <div class="bookitem" data-bookid="{{$value.id}}">
+                    <p class="pimg">
+                        <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
+                        {{if $value.isLive}}
+                          <span class="readed"><img src="../images/class.png" alt=""></span>
+                        {{/if}}
+                    <p>
+                    <div class="bookname">
+                        <div class="bookcircle" style="background:{{color}}"></div>
+                        {{if $value.bookName}}
+                          <span>{{$value.bookName}}</span>
+                        {{else if !$value.bookName}}
+                          <span>book</span>
+                        {{/if}}
+                    </div>
+                    <div class="wordnum">词汇量:{{if !$value.vocabulary}}0{{else if $value.vocabulary>0}}{{$value.vocabulary}}{{/if}}</div>
+                    {{if $value.isLook==1}}
+                      <img src="../images/read.png" alt="" class="yiread">
+                    {{/if}}
+                 </div>
+            {{/each}}
+         </script>
       </main>
 </body>
 </html>
+<!--{{$value.firstImage}}-->
