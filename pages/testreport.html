@@ -11,10 +11,10 @@
     <script src="../js/template-web.js"></script>
     <script src="../js/jquery.cookie.js"></script>
     <script src="../js/main.js"></script>
-    <!--<script src="../js/testport.js"></script>-->
+    <script src="../js/testport.js"></script>
 </head>
 <body style="background:#F9F9F9">
-      <!--<script id="testreport" type="text/html">-->
+     <script id="testreport" type="text/html">
         <header class="testreportheader">
                 <img src="../images/bee.png" alt="" class="bee">
                 <img src="../images/title.png" alt="" class="reporttitle">
@@ -23,10 +23,7 @@
             <div class="re_tishi">
                 <h4>{{userName}}</h4>
                 <p class="level">
-                    <!--{{comments}}-->
-                    你的阅读水平不错哦，
-                    词汇量达到了XXXX,
-                    继续加油！
+                    {{comments}}
                 </p>
             </div>
             <div class="re_tishi">
@@ -40,9 +37,9 @@
                         <img src="../images/colors/magenta.png" alt="学丰" class="colorpic">
                         <img src="../images/colors/Tri-magenta.png" class="jianpic">
                     </div>
-                    <div class="box selected">
+                    <div>
                         <img src="../images/colors/red.png" alt="学丰" class="colorpic">
-                        <img src="../images/colors/Tri-red.png" class="jianpic showjian">
+                        <img src="../images/colors/Tri-red.png" class="jianpic">
                     </div>
                     <div>
                         <img src="../images/colors/yellow.png" alt="学丰" class="colorpic">
@@ -76,27 +73,8 @@
             <button class="golibary">去图书馆</button>
         </main>
         <div class="moreTest">
-                联系助教进一步测评
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=150687281&site=qq&menu=yes">联系助教进一步测评</a>
         </div>
-    <!--</script>-->
-    <script>
-        var divDoms=$(".colorline>div");
-        divDoms.each(function(index,item){
-            $(this).css("left",0.664*index+"rem");
-        })
-
-        var colors=[
-            {picurl:"../images/colors/magenta.png",flag:"../images/colors/Tri-magenta.png"},
-            {picurl:"../images/colors/red.png",flag:"../images/colors/Tri-red.png"},
-            {picurl:"../images/colors/yellow.png",flag:"../images/colors/Tri-yellow.png"},
-            {picurl:"../images/colors/blue.png",flag:"../images/colors/Tri-blue.png"},
-            {picurl:"../images/colors/green.png",flag:"../images/colors/Tri-green.png"},
-            {picurl:"../images/colors/orange.png",flag:"../images/colors/Tri-orange.png"},
-            {picurl:"../images/colors/Turquoise.png",flag:"../images/colors/Tri-Turquoise.png"},
-            {picurl:"../images/colors/Purple.png",flag:"../images/colors/Tri-purple.png"},
-            {picurl:"../images/colors/Gold.png",flag:"../images/colors/Tri-gold.png"}
-        ]
-       
     </script>
 </body>
 </html>

@@ -24,9 +24,7 @@
                     <img src="../images/arrow-down.png" alt="" class="arrow">
                     <div class="kin_option option  koption">
                         <ul>
-                            <!--<li>幼儿园/小学</li>
-                            <li>初中</li>
-                            <li>高中</li>-->
+                           
                         </ul>
                     </div>
                 </div>
@@ -36,10 +34,7 @@
                     <img src="../images/arrow-down.png" alt="" class="arrow">
                     <div class="kin_option option joption">
                         <ul>
-                            <!--<li><div class="circle orange"></div><span>橙色</span></li>
-                            <li><div class="circle lblue"></div><span>浅蓝</span></li>
-                            <li><div class="circle zi"></div><span>紫色</span></li>
-                            <li><div class="circle jin"></div><span>金色</span></li>-->
+                           
                         </ul>
                     </div>
                 </div>
@@ -50,7 +45,7 @@
            {{each booksList}}
                 <div class="bookitem" data-bookid="{{$value.id}}">
                     <p class="pimg">
-                        <img src="../images/cover-monkey-fun.jpg" alt="" class="bimg">
+                        <img src="{{booksSite}}{{$value.firstImage}}" alt="" class="bimg">
                         {{if $value.isLive}}
                           <span class="readed"><img src="../images/class.png" alt=""></span>
                         {{/if}}
@@ -58,7 +53,7 @@
                     <div class="bookname">
                         <div class="bookcircle" style="background:{{color}}"></div>
                         {{if $value.bookName}}
-                          <span>{{$value.bookName}}</span>
+                          <span>{{$value.bookName | message}}</span>
                         {{else if !$value.bookName}}
                           <span>book</span>
                         {{/if}}

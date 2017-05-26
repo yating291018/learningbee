@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="../css/swiper.min.css">
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/template-web.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/librarydesc.js"></script>
+    <script src="../js/swiper.min.js"></script>
 </head>
 <body style="background:#F9F9F9">
     <header class="libdesc_header">
@@ -24,15 +26,13 @@
         </div>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="../images/book1.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="../images/book2.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="../images/book3.jpg" alt="">
-                </div>
+                <script id="swiperslide" type="text/html">
+                   {{each pictureList}}
+                       <div class="swiper-slide">
+                            <img src="{{url}}{{$value.picturePath}}" alt="">
+                       </div>
+                   {{/each}}
+                </script>
             </div>
             <a href="###" class="arrowlr arrowleft">
                 <img src="../images/arrow-round-left.png" alt="">
@@ -40,7 +40,13 @@
             <a href="###" class="arrowlr arrowright">
                 <img src="../images/arrow-round-right.png" alt="">
             </a>
-            <div class="numshow"><span class="currentIndex">1</span>/3</div>
+            <div class="numshow"><span class="currentIndex">1</span>/
+               <span class="nums">
+                    <script id="sum" type="text/html">
+                        {{num}}
+                    </script>
+                </span>
+            </div>
         </div>
         <div class="bookdesc">
             Cat looked in the bag.
@@ -49,14 +55,7 @@
     <script src="../js/swiper.min.js"></script>
     <script>
         //swiper滑动
-            var mySwiper = new Swiper ('.swiper-container', {
-                        direction: 'horizontal',
-                        prevButton:'.arrowleft',
-                        nextButton:'.arrowright',
-                        onSlideChangeStart: function(swiper){
-                            $(".currentIndex").text(swiper.activeIndex+1);
-                        }
-            })
+           
     </script>
 </body>
 </html>

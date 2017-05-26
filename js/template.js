@@ -3,7 +3,6 @@ $(function(){
     var index=0;
     var result=[];
     var temgrade=gradeToQuestion(localStorage.getItem("grade"));
-    console.log(temgrade+"===============")
     switch(temgrade){
         case 1:
             questiontype=magenta;
@@ -43,6 +42,7 @@ $(function(){
                     console.log(result)
                     /*========================================================================*/ 
                     var newresult=numToEn(result);
+
                     getOpenid(window.location.href,function(openid){
                             var data={
                                 "openId":openid,
@@ -61,7 +61,6 @@ $(function(){
                                     {answerValue:newresult[9],questionEdition:"1.0",questionNo:temgrade+"-"+10}
                                 ]
                             }
-                            console.log(data)
                             var timer=null;
                             clearTimeout(timer);
                             timer=setTimeout(function(){
@@ -72,6 +71,7 @@ $(function(){
                                     async:true,
                                     dataType : "json",
                                     success:function(data){
+                                        console.log(data);
                                         if(data.errCode=="00"){
                                             window.location.href="../pages/testreport.html";
                                         }else{
