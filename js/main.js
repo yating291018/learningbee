@@ -414,14 +414,7 @@
         // var openid=$.cookie("xfOpenId");
         var openid="oVP3EwmxhH45T9PRDCNt6R1XgiTU";
         if(!openid){
-                $.post("http://mptest.learningbee.net/xfwx/requestOpenId").done(function(data){
-                    if(typeof(data.openId)!='undefined' && data.openId !='' && data.openId !=null  && data.openId !='null' ){
-                        openid=data.openId;
-                        if(callback) callback(openid);
-                    }else{
-                        window.location.href="http://mptest.learningbee.net/xfwx/getOpenId2?path="+locationurl;
-                    }
-                })
+			   window.location.href="http://mptest.learningbee.net/xfwx/getOpenId2?path="+locationurl;
         }else{
                if(callback) callback(openid);
         }

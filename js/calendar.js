@@ -2,6 +2,8 @@
     var monthEn=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
     $(function(){
          calendarCourse();
+         judgeDevice();
+         $(window).resize(judgeDevice);
     })
     //操作日历
     function  calendarCourse(){
@@ -87,7 +89,12 @@
                                                     lihtml+="</div> </div></li>";
                                                 }else{
                                                     if(!cmark){
-                                                        lihtml +="<li><div class='day "+mark+" premonth'>\
+                                                       if(pwdays>=cdate){
+                                                            flag="unselect"
+                                                       }else{
+                                                            flag="unselect";
+                                                       }
+                                                        lihtml +="<li><div class='day "+mark+" "+flag+" premonth'>\
                                                                 <span>"+pwdays+"</span>\
                                                                 <div>";
                                                         var dj=ymd(year,month,pwdays);
@@ -102,6 +109,7 @@
                                                         })
                                                         lihtml+="</div></div></li>";
                                                         pwdays++;
+                                                     
                                                     }else{
                                                         if(month==nowmonth+1 && nindex<=cdate){
                                                             lihtml +="<li><div class='day "+mark+" nextmonth'>\
@@ -163,4 +171,14 @@
                         $(".year").text(currentyear)
                         calendar(currentyear,weekindex+1);
                 })
+    }
+    //判断设备是ios,还是android
+    function  judgeDevice() {
+        let ua = navigator.userAgent.toLowerCase();
+        let beeapp=$(".beeapp");
+        if (/Android/i.test(ua)) {
+            beeapp.attr("href","http://fusion.qq.com/cgi-bin/qzapps/unified_jump?appid=52439765");
+        } else if (/(iPhone|iPad|iPod|iOS)/i.test(ua)) {
+            beeapp.attr("href"," https://www.pgyer.com/r8vd");
+        }
     }
